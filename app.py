@@ -171,12 +171,16 @@ if "dv_step" not in st.session_state or st.session_state.get("dv_step_owner") !=
 
 st.markdown("## 🎯 Bisecting k-Means in Aktion")
 
-step = st.slider(
-    "Schritt (Split)", 0, max_step, key="dv_step",
-    help="Ein Schritt = ein Split. Reglerposition entspricht standardmäßig der "
-    "eingestellten Ziel-Clusteranzahl - frei verschiebbar, um die gesamte "
-    "Split-Geschichte von der Wurzel bis zur höchsten Auflösung zu erkunden.",
-)
+if max_step == 0:
+    step = 0
+    st.caption("Nur ein einziger Split möglich - kein Regler nötig.")
+else:
+    step = st.slider(
+        "Schritt (Split)", 0, max_step, key="dv_step",
+        help="Ein Schritt = ein Split. Reglerposition entspricht standardmäßig der "
+        "eingestellten Ziel-Clusteranzahl - frei verschiebbar, um die gesamte "
+        "Split-Geschichte von der Wurzel bis zur höchsten Auflösung zu erkunden.",
+    )
 
 dendro_col, scatter_col = st.columns(2)
 dendro_col.plotly_chart(
