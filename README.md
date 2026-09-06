@@ -1,5 +1,7 @@
 # Divisive Clustering für schrittweise Depot-Aufspaltung – Streamlit-Demo
 
+**[→ Demo live ausprobieren](https://sebastianhanisch-divisive-demo.streamlit.app/)**
+
 Neuntes Stück der "Konzepte"-Reihe für die Website "Sebastian Hanisch – Operations
 Research und Machine Learning". Anders als jedes bisherige Stück dieser Reihe behebt
 diese Demo **keine konkrete Schwäche** eines Vorgängers - sie ist ein bewusster
