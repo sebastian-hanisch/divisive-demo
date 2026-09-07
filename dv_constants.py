@@ -25,10 +25,6 @@ SPLIT_CRITERION_LABELS = {
     "sse": "Fehlerquadratsumme (am wenigsten homogen)",
 }
 
-RING_RADIUS = 3.0
-ARC_RADIUS = 2.5
-ARC_RING_RADIUS = 6.5
-
 # Sicherheitsgrenze - die Single-Linkage-Referenzimplementierung fuer den
 # Methodenvergleich ist bewusst naiv O(n^3), Bisecting k-Means selbst waere auch bei
 # deutlich mehr Punkten schnell.
